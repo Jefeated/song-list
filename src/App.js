@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Songs from './Components/Songs';
 import AddSong from './Components/AddSong';
-import SearchSong from './Components/SearchSong';
 import './App.css';
 
 class App extends Component {
@@ -41,7 +40,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchSong searchSongs = {this.state.searchSong}/>
         <AddSong addSong = {this.handleAddSong.bind(this)} />
         <Songs songs={this.state.songs}/>
       </div>

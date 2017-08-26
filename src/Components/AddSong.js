@@ -25,6 +25,9 @@ class AddSong extends Component {
       });
     }
     e.preventDefault();
+    this.refs.title.value = '';
+    this.refs.artist.value = '';
+    this.refs.category.value = '';
   }
   render() {
     let categoryOptions = this.props.categories.map(category => {
