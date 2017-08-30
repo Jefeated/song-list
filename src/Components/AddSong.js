@@ -34,28 +34,29 @@ class AddSong extends Component {
       return <option key = {category} value={category}>{category}</option>
     });
     return (
-      <div>
-        <h3>Add Song</h3>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <div>
-            <label>Title</label><br />
-            <input type="text" ref="title" />
-          </div>
-          <div>
-            <label>Artist</label><br />
-            <input type="text" ref="artist" />
-          </div>
-          <div>
-            <label>Category</label><br />
-            <select ref="category">
-              {categoryOptions}
-            </select>
-          </div>
-          <br />
-          <input type="submit" value="Submit" />
-        </form>
-        <br />
-      </div>
+        <div className="col-md-4">
+          <form  onSubmit={this.handleSubmit.bind(this)}> 
+            <div className="form-group">
+          <h3>Add Song</h3>
+            <div>
+              <h5>Title</h5>
+              <input className="form-control" type="text" ref="title" />
+            </div>
+            <div>
+              <h5>Artist</h5>
+              <input className="form-control" type="text" ref="artist" />
+            </div>
+            <div>
+              <h5>Category</h5>
+              <select className="form-control" ref="category">
+                {categoryOptions}
+              </select>
+            </div>
+            <br />
+            <input className="btn btn-default" type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
     );
   }
 }

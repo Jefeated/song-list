@@ -30,12 +30,14 @@ class Songs extends Component {
     });
   }
     return (
-      <div className="Songs">
+      <div className="col-md-6">
           <input type="text"
-          className ="search" 
+          className ="form-control" 
+          id="search"
           placeholder = "Search Songs"
           value={this.state.search}
           onChange={this.updateSearch.bind(this)}/>
+          <h3>Songs</h3>
         {songItems}
       </div>
     );
